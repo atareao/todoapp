@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"flag"
 	todo "github.com/JamesClonk/go-todotxt"
-	"github.com/codegangsta/cli"
+	"github.com/urfave/cli"
 	"io"
 	"net/http"
 	"net/http/httptest"
