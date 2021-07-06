@@ -52,7 +52,7 @@ func main() {
                 Usage: "filename/path of configuration file to use",
             },
 		    &cli.StringFlag{
-                Name: "file", 
+                Name: "file",
                 Aliases: []string{"f"},
                 Value: "todo.txt",
                 Usage: "filename/path of todo.txt file to use",
