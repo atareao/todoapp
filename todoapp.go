@@ -41,11 +41,19 @@ func main() {
         Flags: []cli.Flag{
             &cli.IntFlag{
                 Name: "port",
-                Aliases: []String{"p"}
+                Aliases: []String{"p"},
                 Value: 4004,
                 Usage: "port for the todoapp web server"},
-		    &cli.StringFlag{"file,f", "todo.txt", "filename/path of todo.txt file to use"},
-		    &cli.StringFlag{"config,c", "todoapp.config", "filename/path of configuration file to use"},
+		    &cli.StringFlag{
+                Name: "file", 
+                Aliases: []String{"f"},
+                Value: "todo.txt",
+                Usage: "filename/path of todo.txt file to use"},
+		    &cli.StringFlag{
+                Name: "config",
+                Aliases: []String{"c"},
+                Value: "todoapp.config",
+                Usage: "filename/path of configuration file to use"},
 	    }
     }
 	app.Run(os.Args)
