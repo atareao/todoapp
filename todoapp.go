@@ -31,22 +31,23 @@ type View struct {
 }
 
 func main() {
-	app := cli.NewApp()
-	app.Name = "todoapp"
-	app.Usage = "A browser-based Todo.txt application"
-	app.Version = "1.0.0"
-	app.Author = "JamesClonk"
-	app.Email = "jamesclonk@jamesclonk.ch"
-	app.Action = mainAction
-	app.Flags = []cli.Flag{
-        cli.IntFlag{
-            Name: "port",
-            Aliases: []String{"p"}
-            Value: 4004,
-            Usage: "port for the todoapp web server"},
-		cli.StringFlag{"file,f", "todo.txt", "filename/path of todo.txt file to use"},
-		cli.StringFlag{"config,c", "todoapp.config", "filename/path of configuration file to use"},
-	}
+	app := &cli.App{
+        Name: "todoapp",
+        Usage: "A browser-based Todo.txt application",
+        Version: "1.0.0",
+        Author: "JamesClonk",
+        Email: "jamesclonk@jamesclonk.ch",
+        Action: mainAction,
+        Flags: []cli.Flag{
+            &cli.IntFlag{
+                Name: "port",
+                Aliases: []String{"p"}
+                Value: 4004,
+                Usage: "port for the todoapp web server"},
+		    &cli.StringFlag{"file,f", "todo.txt", "filename/path of todo.txt file to use"},
+		    &cli.StringFlag{"config,c", "todoapp.config", "filename/path of configuration file to use"},
+	    }
+    }
 	app.Run(os.Args)
 }
 
