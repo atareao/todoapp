@@ -32,8 +32,8 @@ type View struct {
 
 func main() {
 	app := &cli.App{
-        Name: "todoapp",
-        Usage: "A browser-based Todo.txt application",
+        //Name: "todoapp",
+        //Usage: "A browser-based Todo.txt application",
         //Version: "1.0.0",
         //Author: "JamesClonk",
         //Email: "jamesclonk@jamesclonk.ch",
