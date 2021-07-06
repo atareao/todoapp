@@ -39,7 +39,7 @@ func main() {
 	app.Email = "jamesclonk@jamesclonk.ch"
 	app.Action = mainAction
 	app.Flags = []cli.Flag{
-        &cli.IntFlag{
+        cli.IntFlag{
             Name: "port",
             Aliases: []String{"p"}
             Value: 4004,
