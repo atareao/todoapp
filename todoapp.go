@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 	todo "github.com/JamesClonk/go-todotxt"
-	"github.com/codegangsta/cli"
+	"github.com/urfave/cli"
 	"github.com/codegangsta/martini"
 	"github.com/codegangsta/martini-contrib/binding"
 	"github.com/codegangsta/martini-contrib/render"
