@@ -45,6 +45,7 @@ func main() {
                 Value: 4004,
                 Usage: "port for the todoapp web server",
             },
+            /*
 		    &cli.StringFlag{
                 Name: "config",
                 Aliases: []string{"c"},
@@ -57,6 +58,7 @@ func main() {
                 Value: "todo.txt",
                 Usage: "filename/path of todo.txt file to use",
             },
+            */
 	    },
     }
     err := app.Run(os.Args)
