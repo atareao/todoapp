@@ -39,7 +39,11 @@ func main() {
 	app.Email = "jamesclonk@jamesclonk.ch"
 	app.Action = mainAction
 	app.Flags = []cli.Flag{
-		cli.IntFlag{"port,p", 4004, "port for the todoapp web server"},
+        &cli.IntFlag{
+            Name: "port",
+            Aliases: []String{"p"}
+            Value: 4004,
+            Usage: "port for the todoapp web server"},
 		cli.StringFlag{"file,f", "todo.txt", "filename/path of todo.txt file to use"},
 		cli.StringFlag{"config,c", "todoapp.config", "filename/path of configuration file to use"},
 	}
